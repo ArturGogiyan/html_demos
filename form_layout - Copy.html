@@ -1,0 +1,1602 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TP4P4KW');</script>
+<!-- End Google Tag Manager -->
+    <!--Blazor:{"sequence":0,"type":"server","prerenderId":"eb7716bd655348499f170884848b2929","descriptor":"CfDJ8FlXEFeJNSxDhTTF22ZPwmoUcyjg8SOZASjImRk/amIao3FNGMmFVzIUCvJhFVcp9xHyalW2b3REginUgBnx69e30jPqTTx9an/BuAC8vVpxAqlUImQpZT4s12AmXN\u002BOu/vuHMLgNY9F87NBKNlqem\u002BhOT26jkg9X\u002BKqB2NlnHGCiBNDz9QClEjZRQr2wmh0poHEItZ9k/aa69eGZcvfxACFXLP/iyv89KzlSoNC2/X2OlmBVGjBxRuAnq776IBRnP3oPS\u002BIQYKaKhBHc5wBwPN5PxYfCMh0jsEXJNuODSRyfQgHGxGhhEcrn/ohj2iaY9U4KhVGCk8C8C429xpkzJev9bYY6ZMm1QlrXT2I0LyEASD2UgzILNr/lnGZJOEnlAqYZufMtDYb6Itl\u002BQoOw3iu\u002BKIks2nLh4iZckpdIVLHH2MBrQc1gcXoGdGk3f1kjQ=="}-->
+<base href="/blazor/"/>
+<meta charset="utf-8" content/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:url" content="https://dxpr.es/2WogLq7"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Native Blazor Components powered by DevExpress"/>
+<meta property="og:description" content="DevExpress UI for Blazor ships with native user interface components (including a Data Grid, Pivot Grid, Charts and Scheduler) so you can design rich user experiences with both Blazor."/>
+<meta property="og:image" content="https://static.devexpress.com/Products/Blazor/blazor-components-grid-pivot-scheduler-charts-editor-devexpress.jpg"/>
+<meta name="description" content="DevExpress Blazor Form Layout allows you to construct responsive and automatically-aligned edit forms. Form Layout can group items, display UI elements in tabs. You can also bind the component to a data source."/>
+<script type="text/javascript" id="highlight-js" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script type="text/javascript" id="scroll-view-js" src="/blazor/lib/scroll-view.js"></script>
+<script type="text/javascript" id="demo-js" src="/blazor/lib/dx-demo.js"></script>
+<link rel="stylesheet" id="site-css" href="/blazor/css/site.css"/>
+<link rel="stylesheet" id="highlight-css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/>
+<link rel="stylesheet" id="demo-css" href="/blazor/css/dx-demo.css"/>
+<link rel="stylesheet" id="scroll-view" href="/blazor/css/scroll-view.css"/>
+<link rel="stylesheet" id="dx-css" href="/blazor/_content/DevExpress.Blazor/dx-blazor.css"/>
+<link rel="stylesheet" id="currentTheme" href="css/switcher-resources/themes/blazing berry/bootstrap.min.css"/>
+<title>Blazor: Navigation and Layout - Form Layout | DevExpress</title>
+<meta name="keywords" content="blazor, components, form, form editor, form layout, formlayout, devexpress, demo, sample, example"/>
+<!--Blazor:{"prerenderId":"eb7716bd655348499f170884848b2929"}-->
+</head>
+<body><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP4P4KW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <app>
+        <!--Blazor:{"sequence":1,"type":"server","prerenderId":"06d1a80301aa4ac48d41a76c9b99955b","descriptor":"CfDJ8FlXEFeJNSxDhTTF22ZPwmoSEsU3VAoGQEG/P3WwoVrCUUMJmc7MbV6uKxX76NLWelNkJxoI4ivlRS2m6f0a46E/P8eR04VV8yeQPiHfAy22wK3DwHf0XXU7vWQOrxKlP5asf\u002BXgdKMTBQQZA7XR5RK0b3hgR89usdDRdiCp59Klmu7E\u002BdIKT0YvyMOQlYHA7FLd0Kkgv8CE0cCLdV4yPeUblbcNXonklFV0qjCsqfVn62kOOKHnpqEUIWbGxXxlCTgaQscREg70axZ5h4Q8XX3ULOBDkp51Z852Ti4f0fbiesVtqfmZxBb50nDBhKoXXdSnTv5pBazBr5Uy/nA7Qr9oJHhrr5gNlRIxROLP1YNfPLYU9OBGJ6wouWCAMAvj1w=="}-->
+        <nav class="top-row logo-container p-0 navbar navbar-dark fixed-top flex-nowrap">
+    <button class="navbar-toggler d-block bg-primary border-0">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="logo-image"></span>
+    <div class="demo-btn-container d-flex">
+        <a class="download-btn navbar-toggler d-inline-block bg-primary text-white border-0" href="https://nuget.devexpress.com/" target="_blank" title="Obtain your NuGet feed URL">
+            <span class="demo-download-icon"></span>
+        </a>
+        <div class="bg-light text-dark d-inline-block theme-settings False">
+            <a class="nav-item nav-link" href="javascript:void(0);">
+                <span class="demo-theme-icon"></span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="sidebar ">
+    <script src="/blazor/_content/DevExpress.Blazor/dx-blazor.js" async></script><div class="blazor-scroll-view ">
+        <div>
+            
+        
+        
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+        
+                
+                
+                
+                
+            
+        
+                
+                
+                
+                
+                
+                
+                
+                
+            
+        
+                
+                
+            
+        
+                
+                
+                
+                
+                
+                
+                
+                
+            
+        
+                
+            
+        
+                
+                
+                
+                
+                
+            
+        
+                
+            
+        
+        <nav id="idad1f3c2f-77ee-4983-8b19-302da603c269" class="dxbs-tree app-sidebar">
+        <ul class="nav nav-pills flex-column">
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="">
+                <span aria-hidden="true" class="invisible expand-btn demo-icon-expand"></span>
+                <span>Overview</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Data Grid</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Pivot Grid</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Charts</span>
+                <span class="badge badge-secondary">
+                    <span>Upd</span>
+                </span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Scheduler</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Data Editors</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Buttons</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>Navigation and Layout</span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="javascript:;">
+                <span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+                <span>File Management</span>
+                <span class="badge badge-secondary">
+                    <span>New</span>
+                </span>
+        </a>
+</li>
+		
+<li class="nav-item" role="presentation">
+        <a class="nav-link dxbs-clickable" href="FormValidation">
+                <span aria-hidden="true" class="invisible expand-btn demo-icon-expand"></span>
+                <span>Form Validation</span>
+        </a>
+</li>
+</ul>
+    </nav>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="info-wrapper">
+            <div class="version">Version: 19.2.4</div>
+            <div class="copyright">
+                <span>Copyright &copy; 2006-</span><span>2020</span>
+                Developer Express Inc
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="content px-4">
+        <div class="demo-description" id="Overview">
+    <h2><a href="FormLayout#Overview" class="demo-anchor"></a>Form Layout - Overview</h2>
+    <p>
+        The DevExpress <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayout">Form Layout</a> component for Blazor allows you to easily construct responsive and automatically-aligned edit forms.
+    </p>
+    <p>
+        The Form Layout component uses the Bootstrap grid system markup: each layout item occupies between 1 and 12 virtual columns. This value can be defined separately for five different screen resolution types, as listed below:
+    </p>
+    <ol>
+        <li><a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.ColSpanXl">ColSpanXl</a> - Extra large screens (1200px or wider).</li>
+        <li><a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.ColSpanLg">ColSpanLg</a> - Large screens (992px or wider).</li>
+        <li><a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.ColSpanMd">ColSpanMd</a> - Medium screens (768px or wider).</li>
+        <li><a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.ColSpanSm">ColSpanSm</a> - Small screens (576px or wider).</li>
+        <li><a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.ColSpanXs">ColSpanXs</a> - Extra small screens (less than 576px).</li>
+    </ol>
+
+</div>
+
+<div class="card demo-card-wide">
+    <div class="card-header">Name=<b>Nancy Davolio</b>, Email=<b>NancyDavolio@sample.com</b>, Birthday=<b>4/29/2000 2:36:21 AM</b>, Worked=<b>3</b>, AtVacation=<b>True</b></div>
+    <div class="card-body">
+        
+    
+            
+
+            
+
+            
+
+            
+
+            
+        
+    <div id="id8f8fb0de-84f6-41f3-bbe4-935f9d28e6d4" class="dxbs-fl form-horizontal">
+        <div class="row"><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="ide8e7cd02-8d53-4ea2-963e-738795b9961d">
+                    Contact Name:
+                </label>
+                
+                    
+                        
+                    <div id="id3a427449-5546-4b37-a8a3-34c96b7e0329" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="ide8e7cd02-8d53-4ea2-963e-738795b9961d" name="id2b516f89-4ce3-4446-9a8e-74ad4d71d140" value="Nancy Davolio" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id7b69e533-169e-4874-b32d-49709742bdc4">
+                    Email:
+                </label>
+                
+                    
+                        
+                    <div id="id8e9757e1-76f9-4490-a296-ced8b1aa73df" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id7b69e533-169e-4874-b32d-49709742bdc4" name="idb64862d7-50bf-458f-b157-73707189005e" value="NancyDavolio@sample.com" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id6b0ecb8a-f927-4e94-8daf-2edee0e3c4a8">
+                    Birthday:
+                </label>
+                
+                    
+                        
+                    <div id="id0f05dc6f-6898-4634-8de9-0e6417fdc962" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="id6b0ecb8a-f927-4e94-8daf-2edee0e3c4a8" name="id25d013eb-f428-4fa8-adba-6cfdcaae168f" value="04/29/2000" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id26696c66-8a4d-4c09-b57f-87394c9ee444">
+                    Worked year(s):
+                </label>
+                
+                    
+                        
+                    <div class="dxbs-spin-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="id26696c66-8a4d-4c09-b57f-87394c9ee444" name="ide9bdcfa5-1636-44cf-88cc-ebb7dc75e3c7" value="3" type="text" class="form-control dxbs-form-control" autocomplete="off" inputmode="decimal" data-previous-value="3"></input>
+        <span class="dxbs-feedback dxbs-spin-btn-group">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+        
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id9c0b3bfd-ff22-4c01-8b9b-8af73d1a147d">
+                    At Vacation:
+                </label>
+                
+                    
+                        
+                    
+    <div class="dx-checkbox custom-control custom-checkbox dxbs-fl-ctrl">
+<input id="id9c0b3bfd-ff22-4c01-8b9b-8af73d1a147d" type="checkbox" class="custom-control-input" checked></input><label class="custom-control-label" style="user-select:none" for="id9c0b3bfd-ff22-4c01-8b9b-8af73d1a147d">
+
+    
+    </label>    </div>
+
+                
+                    
+                
+    </div>
+</div></div>
+    </div>
+
+
+    </div>
+</div>
+
+<div class="code-snippet card demo-card-wide">
+    <div class="code-header card-footer p-0 ">
+    <div class="lang-group nav nav-code">
+        <a href="javascript:;" class="nav-link active border-primary">Razor</a>
+    </div>
+</div>
+    <div class="card-footer text-muted ">
+        <pre><code class="hljs xml">
+&lt;DxFormLayout&gt;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Contact Name:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@Name&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Email:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@Email&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Birthday:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxDateEdit @bind-Date=&quot;@Birthday&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Worked year(s):&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxSpinEdit @bind-Value=&quot;@Worked&quot;&gt;&lt;/DxSpinEdit&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;At Vacation:&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxCheckBox @bind-Checked=&quot;@AtVacation&quot;&gt;&lt;/DxCheckBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&lt;/DxFormLayout&gt;&#xD;&#xA;&#xD;&#xA;@code {&#xD;&#xA;    string name = &quot;Nancy Davolio&quot;;&#xD;&#xA;    string Name { get =&gt; name; set { name = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string email = &quot;NancyDavolio@sample.com&quot;;&#xD;&#xA;    string Email { get =&gt; email; set { email = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime birthday = DateTime.Now.AddYears(-20);&#xD;&#xA;    DateTime Birthday { get =&gt; birthday; set { birthday = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    int worked = 3;&#xD;&#xA;    int Worked { get =&gt; worked; set { worked = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    bool atVacation = true;&#xD;&#xA;    bool AtVacation { get =&gt; atVacation; set { atVacation = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    void OnChanged() { InvokeAsync(StateHasChanged); }&#xD;&#xA;}
+</code></pre>
+
+    </div>
+</div>
+<div class="demo-description" id="CaptionPosition">
+    <h2><a href="FormLayout#CaptionPosition" class="demo-anchor"></a>Form Layout - Caption Position</h2>
+    <p>
+        The Form Layout’s <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutBase.CaptionPosition">CaptionPosition</a> property defines where to display caption labels. In this demo, the <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutBase.CaptionPosition">CaptionPosition</a> property is set to <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.CaptionPosition">CaptionPosition.Vertical</a> to stack captions above associated editors.
+    </p>
+</div>
+
+<div class="card demo-card-wide">
+    <div class="card-header">Location=<b>London</b>, CheckIn=<b>4/29/2020 2:36:21 AM</b>, CheckOut=<b>4/29/2020 2:36:21 AM</b></div>
+    <div class="card-body">
+        
+    
+            
+
+            
+
+            
+        
+    <div id="idba268b6c-c729-4680-b09c-cf41e5344c9f" class="dxbs-fl">
+        <div class="row"><div class="col-lg-4 col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id4c297b34-c0e4-4031-9712-846157bede7d">
+                    Location:
+                </label>
+                
+                    
+                        
+                    <div id="idebd2f172-cbef-4566-96e3-72c359220df4" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id4c297b34-c0e4-4031-9712-846157bede7d" name="idb544fcd0-651f-44bd-b833-dcf21e609a1c" value="London" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-lg-4 col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="ide3b27d7d-e848-49c6-b828-c289412a9808">
+                    Check in:
+                </label>
+                
+                    
+                        
+                    <div id="id71ddb2c7-adaf-4c15-b98b-dad90c18d582" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="ide3b27d7d-e848-49c6-b828-c289412a9808" name="ide6297de3-43ea-403b-ab45-79c3fa9094d1" value="04/29/2020" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-lg-4 col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id6348021b-5817-492e-b393-22f8af60fa97">
+                    Check out:
+                </label>
+                
+                    
+                        
+                    <div id="id37f41aef-6b82-4f00-b3a8-d7b5fd4b6fe6" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="id6348021b-5817-492e-b393-22f8af60fa97" name="idcb1a7a69-2fe4-4632-9223-cb4d176789c9" value="04/29/2020" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div></div>
+    </div>
+
+    </div>
+</div>
+
+<div class="code-snippet card demo-card-wide">
+    <div class="code-header card-footer p-0 ">
+    <div class="lang-group nav nav-code">
+        <a href="javascript:;" class="nav-link active border-primary">Razor</a>
+    </div>
+</div>
+    <div class="card-footer text-muted ">
+        <pre><code class="hljs xml">
+&lt;DxFormLayout CaptionPosition=&quot;@CaptionPosition.Vertical&quot;&gt;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Location:&quot; ColSpanLg=&quot;4&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@Location&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Check in:&quot; ColSpanLg=&quot;4&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxDateEdit @bind-Date=&quot;@CheckIn&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Check out:&quot; ColSpanLg=&quot;4&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxDateEdit @bind-Date=&quot;@CheckOut&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&lt;/DxFormLayout&gt;&#xD;&#xA;&#xD;&#xA;@code {&#xD;&#xA;    string location = &quot;London&quot;;&#xD;&#xA;    string Location { get =&gt; location; set { location = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime checkIn = DateTime.Now;&#xD;&#xA;    DateTime CheckIn { get =&gt; checkIn; set { checkIn = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime checkOut = DateTime.Now;&#xD;&#xA;    DateTime CheckOut { get =&gt; checkOut; set { checkOut = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    void OnChanged() { InvokeAsync(StateHasChanged); }&#xD;&#xA;}
+</code></pre>
+
+    </div>
+</div>
+<div class="demo-description" id="ItemWrapping">
+    <h2><a href="FormLayout#ItemWrapping" class="demo-anchor"></a>Form Layout - Item Wrapping</h2>
+    <p>
+        All <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayout#layout-items">layout items</a> are rendered as <b>.col</b> elements within a single <b>.row</b> container by default. An item moves to the next row if there are not enough columns within the current row. You can also use an item’s <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.BeginRow">BeginRow</a> property to explicitly indicate that it should be placed onto a new row.
+    </p>
+    <p>
+        Refer to the <a href="http://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap documentation</a> for additional information on the Bootstrap Grid system.
+    </p>
+</div>
+
+<div class="card demo-card-wide">
+    <div class="card-header">Address=<b>120 Hanover Sq.</b>, City=<b>London</b>, ZipCode=<b>WA1 1DP</b>, Country=<b>UK</b></div>
+    <div class="card-body">
+        
+    
+            
+
+            
+
+            
+
+            
+
+        
+    <div id="idf44599ff-b901-4c86-b106-9efc0c394646" class="dxbs-fl form-horizontal">
+        <div class="row"><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idc4b3af40-4c9a-4be3-aa56-30ac5fb86402">
+                    Address:
+                </label>
+                
+                    
+                        
+                    <div id="id7a47ddd0-5692-4103-bf56-91d7bb023609" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="idc4b3af40-4c9a-4be3-aa56-30ac5fb86402" name="id8d305ff2-d6c6-4c18-9962-1d0ab63c7c0e" value="120 Hanover Sq." type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="ide5ceeb27-65dd-42f7-b805-1e11232b3705">
+                    City:
+                </label>
+                
+                    
+                        
+                    <div id="id05d8210a-d2b0-4a90-b3e5-da4ba57cbe27" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="ide5ceeb27-65dd-42f7-b805-1e11232b3705" name="id92d01c48-f4dd-4e0e-bcd5-973d3e21740c" value="London" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div></div><div class="row"><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id5ac9af94-2360-456f-8328-26d6a29dbdd7">
+                    Postal/ZIP Code:
+                </label>
+                
+                    
+                        
+                    <div id="id25ee364a-7cf8-4394-a4d6-e9bbf8abf8d7" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id5ac9af94-2360-456f-8328-26d6a29dbdd7" name="idcdc8f6f9-19ce-4555-a532-5e2a45fff58d" value="WA1 1DP" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div></div><div class="row"><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id7dbf575b-87f2-4f99-8124-7a48481b55c3">
+                    Country
+                </label>
+                
+                    
+                        
+                    <div id="id17065ded-c74e-4315-a4f7-2f0a19bcf155" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id7dbf575b-87f2-4f99-8124-7a48481b55c3" name="id9341f930-44ed-4880-a2f8-c7375d2abccb" value="UK" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                
+                    
+                
+    </div>
+</div></div>
+    </div>
+
+    </div>
+</div>
+
+<div class="code-snippet card demo-card-wide">
+    <div class="code-header card-footer p-0 ">
+    <div class="lang-group nav nav-code">
+        <a href="javascript:;" class="nav-link active border-primary">Razor</a>
+    </div>
+</div>
+    <div class="card-footer text-muted ">
+        <pre><code class="hljs xml">
+&lt;DxFormLayout&gt;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Address:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@Address&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;City:&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@City&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Postal/ZIP Code:&quot; BeginRow=&quot;true&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@ZipCode&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Caption=&quot;Country&quot; BeginRow=&quot;true&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxTextBox @bind-Text=&quot;@Country&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&lt;/DxFormLayout&gt;&#xD;&#xA;&#xD;&#xA;@code {&#xD;&#xA;    string address = &quot;120 Hanover Sq.&quot;;&#xD;&#xA;    string Address { get =&gt; address; set { address = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string city = &quot;London&quot;;&#xD;&#xA;    string City { get =&gt; city; set { city = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string zipCode = &quot;WA1 1DP&quot;;&#xD;&#xA;    string ZipCode { get =&gt; zipCode; set { zipCode = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string country = &quot;UK&quot;;&#xD;&#xA;    string Country { get =&gt; country; set { country = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    void OnChanged() { InvokeAsync(StateHasChanged); }&#xD;&#xA;}
+</code></pre>
+
+    </div>
+</div>
+<div class="demo-description" id="Groups">
+    <h2><a href="FormLayout#Groups" class="demo-anchor"></a>Form Layout - Groups</h2>
+    <p>
+        A layout group (<a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayoutGroup">DxFormLayoutGroup</a>) is a container for layout items (<a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayoutItem">DxFormLayoutItem</a>) and other layout groups. Layout groups, just like individual items, allow you to specify their width using the same set of <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayoutGroup._members">ColSpanXX</a> properties.
+    </p>
+</div>
+
+<div class="card demo-card-wide">
+    <div class="card-header">FirstName=<b>Nancy</b>, LastName=<b>Davolio</b>, Birthday=<b>4/29/2000 2:36:21 AM</b></div>
+    <div class="card-header">Position=<b>Sales Representative</b>, HireDate=<b>4/29/2000 2:36:21 AM</b>, Notes=<b>Education includes a BA in psychology.</b></div>
+    <div class="card-body">
+        
+    
+            
+                
+
+                
+
+                
+            
+
+            
+                
+                
+                
+            
+        
+    <div id="id85df1e0e-908e-441e-8f81-18514b860442" class="dxbs-fl form-horizontal">
+        <div class="row"><div class="dxbs-fl-gd col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Personal Information
+            </div>
+            
+                <div class="row"><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id8c68dbed-14e0-4da0-b94f-02f9f63bce14">
+                    First Name:
+                </label>
+                
+                    
+                        
+                        <div id="id4563553e-56c6-4ea1-bda6-bb299e3b4811" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id8c68dbed-14e0-4da0-b94f-02f9f63bce14" name="id2f780a08-2af4-41de-ba1d-0c672d8d3f1a" value="Nancy" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                    
+                    
+                
+    </div>
+</div><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idff06364a-f796-47a7-a2d5-b74c9056c757">
+                    Last Name:
+                </label>
+                
+                    
+                        
+                        <div id="id7a78002a-6956-403c-8594-cc8a9671134c" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="idff06364a-f796-47a7-a2d5-b74c9056c757" name="id2e97c7f4-1ac2-434a-bdcb-09aff9ce13f9" value="Davolio" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                    
+                    
+                
+    </div>
+</div><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idcd812a19-cf10-4e4b-8752-6e6d4487a17f">
+                    Birthday:
+                </label>
+                
+                    
+                        
+                        <div id="id5ccc47a5-0c38-4c18-bc93-48fca1a48564" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="idcd812a19-cf10-4e4b-8752-6e6d4487a17f" name="id06b722df-86f3-424c-8720-df154705cc3a" value="04/29/2000" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                    
+                    
+                
+    </div>
+</div></div>
+            
+        </div>
+</div><div class="dxbs-fl-gd col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Work Information
+            </div>
+            
+                <div class="row"><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id4add1ab8-ceef-4121-b76d-8f97e98b7e7a">
+                    Position:
+                </label>
+                
+                    
+                        
+                        <div id="id0e5ea1be-dbf9-4874-ba2b-d9d311240119" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id4add1ab8-ceef-4121-b76d-8f97e98b7e7a" name="id6f07b370-87ae-4f6e-b037-447db236cd0b" value="Sales Representative" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                    
+                    
+                
+    </div>
+</div><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idc72dcee8-a48e-4ad3-a9e3-3f5c8c971ccb">
+                    Hire Date:
+                </label>
+                
+                    
+                        
+                        <div id="id43ef7b64-5494-4384-a436-38b35f4b829f" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="idc72dcee8-a48e-4ad3-a9e3-3f5c8c971ccb" name="idb9a41fda-2cc4-43c7-8ad6-3298eb59adad" value="04/29/2000" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                    
+                    
+                
+    </div>
+</div><div class="col-md-12">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idf2ba5a04-42e2-4b07-9d93-82189c876a7e">
+                    Notes:
+                </label>
+                
+                    
+                        
+                        <div id="id5c5bf893-3a5f-4ae3-982a-699bf95424ab" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="idf2ba5a04-42e2-4b07-9d93-82189c876a7e" name="id69245e22-c0aa-4d41-9884-19f1ad9211fd" value="Education includes a BA in psychology." type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                    
+                    
+                
+    </div>
+</div></div>
+            
+        </div>
+</div></div>
+    </div>
+
+
+    </div>
+</div>
+
+<div class="code-snippet card demo-card-wide">
+    <div class="code-header card-footer p-0 ">
+    <div class="lang-group nav nav-code">
+        <a href="javascript:;" class="nav-link active border-primary">Razor</a>
+    </div>
+</div>
+    <div class="card-footer text-muted ">
+        <pre><code class="hljs xml">
+&lt;DxFormLayout&gt;&#xD;&#xA;    &lt;DxFormLayoutGroup Caption=&quot;Personal Information&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;DxFormLayoutItem Caption=&quot;First Name:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;            &lt;Template&gt;&#xD;&#xA;                &lt;DxTextBox @bind-Text=&quot;@FirstName&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;            &lt;/Template&gt;&#xD;&#xA;        &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;        &lt;DxFormLayoutItem Caption=&quot;Last Name:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;            &lt;Template&gt;&#xD;&#xA;                &lt;DxTextBox @bind-Text=&quot;@LastName&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;            &lt;/Template&gt;&#xD;&#xA;        &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;        &lt;DxFormLayoutItem Caption=&quot;Birthday:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;            &lt;Template&gt;&#xD;&#xA;                &lt;DxDateEdit @bind-Date=&quot;@Birthday&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;            &lt;/Template&gt;&#xD;&#xA;        &lt;/DxFormLayoutItem&gt;&#xD;&#xA;    &lt;/DxFormLayoutGroup&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutGroup Caption=&quot;Work Information&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;DxFormLayoutItem Caption=&quot;Position:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;            &lt;Template&gt;&#xD;&#xA;                &lt;DxTextBox @bind-Text=&quot;@Position&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;            &lt;/Template&gt;&#xD;&#xA;        &lt;/DxFormLayoutItem&gt;&#xD;&#xA;        &lt;DxFormLayoutItem Caption=&quot;Hire Date:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;            &lt;Template&gt;&#xD;&#xA;                &lt;DxDateEdit @bind-Date=&quot;@HireDate&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;            &lt;/Template&gt;&#xD;&#xA;        &lt;/DxFormLayoutItem&gt;&#xD;&#xA;        &lt;DxFormLayoutItem Caption=&quot;Notes:&quot; ColSpanMd=&quot;12&quot;&gt;&#xD;&#xA;            &lt;Template&gt;&#xD;&#xA;                &lt;DxTextBox @bind-Text=&quot;@Notes&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;            &lt;/Template&gt;&#xD;&#xA;        &lt;/DxFormLayoutItem&gt;&#xD;&#xA;    &lt;/DxFormLayoutGroup&gt;&#xD;&#xA;&lt;/DxFormLayout&gt;&#xD;&#xA;&#xD;&#xA;@code {&#xD;&#xA;    string firstName = &quot;Nancy&quot;;&#xD;&#xA;    string FirstName { get =&gt; firstName; set { firstName = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string lastName = &quot;Davolio&quot;;&#xD;&#xA;    string LastName { get =&gt; lastName; set { lastName = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime birthday = DateTime.Now.AddYears(-20);&#xD;&#xA;    DateTime Birthday { get =&gt; birthday; set { birthday = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string position = &quot;Sales Representative&quot;;&#xD;&#xA;    string Position { get =&gt; position; set { position = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime hireDate = DateTime.Now.AddYears(-20);&#xD;&#xA;    DateTime HireDate { get =&gt; hireDate; set { hireDate = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string notes = &quot;Education includes a BA in psychology from Colorado State University in 1970.  She also completed &#x27;The Art of the Cold Call.&#x27;  Nancy is a member of Toastmasters International.&quot;;&#xD;&#xA;    string Notes { get =&gt; notes; set { notes = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    void OnChanged() { InvokeAsync(StateHasChanged); }&#xD;&#xA;}
+</code></pre>
+
+    </div>
+</div>
+<div class="demo-description" id="TabbedGroups">
+    <h2><a href="FormLayout#TabbedGroups" class="demo-anchor"></a>Form Layout - Tabbed Groups</h2>
+    <p>
+        The <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayout#tabs">Form Layout</a> component allows you to group layout items and layout groups into tabbed containers. A tab page collection (<a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayoutTabPages">DxFormLayoutTabPages</a>) allows you to specify the active page using the <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutTabPagesBase.ActiveTabIndex">ActiveTabIndex</a> property.
+    </p>
+</div>
+
+<div class="card demo-card-wide">
+    <div class="card-header">FirstName=<b>Nancy</b>, LastName=<b>Davolio</b>, Birthday=<b>4/29/2000 2:36:21 AM</b></div>
+    <div class="card-header">Position=<b>Sales Representative</b>, HireDate=<b>4/29/2000 2:36:21 AM</b>, Notes=<b>Education includes a BA in psychology.</b></div>
+    <div class="card-body">
+        
+    
+            
+                
+                    
+
+                    
+
+                    
+                
+
+                
+                    
+                    
+                    
+                
+            
+        
+    <div id="id316df130-991d-4190-96be-a79c9962fb07" class="dxbs-fl form-horizontal">
+        <div class="row"><div class="dxbs-fl-gt col-md-12">
+    
+    <nav id="idfb34c367-0e69-4cc3-ae41-248e358a1aa9" class="dxbs-tabs">
+        <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="javascript:;">
+                                <span>Personal Information</span>
+                            </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                            <a class="nav-link active">
+                                <span>Work Information</span>
+                            </a>
+                    </li>
+        </ul>
+        
+                
+                
+        <div class="tab-content">
+                    <div class="tab-pane d-block" role="tabpanel">
+                        
+    <div class="row"><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id13ed9149-ff43-438c-9611-b0b2b1196720">
+                    Position:
+                </label>
+                
+                    
+                        
+                            <div id="id5ed96948-08a1-4c88-9620-022e632f0192" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="id13ed9149-ff43-438c-9611-b0b2b1196720" name="id73007847-718f-4edc-b87a-9981ca5a4c10" value="Sales Representative" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                        
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="ide50e0b7e-e6ab-4f86-b30b-121786a72cf0">
+                    Hire Date:
+                </label>
+                
+                    
+                        
+                            <div id="id4b814738-dac9-4952-8884-693b00bad1c6" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="ide50e0b7e-e6ab-4f86-b30b-121786a72cf0" name="id3877ced3-7d24-4069-b8a4-7c2d11cd62c8" value="04/29/2000" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                        
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idd99bec7a-f0c7-4fcc-b509-8d8ffb737048">
+                    Notes:
+                </label>
+                
+                    
+                        
+                            <div id="ida9425133-ffc6-41d3-833b-2f2276762be1" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="idd99bec7a-f0c7-4fcc-b509-8d8ffb737048" name="id428eb376-aea2-4cb7-a1aa-a1d8eb47e3dd" value="Education includes a BA in psychology." type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                        
+                    
+                
+    </div>
+</div></div>
+
+                    </div>
+        </div>
+    
+    </nav>
+    
+
+</div></div>
+    </div>
+
+    </div>
+</div>
+
+<div class="code-snippet card demo-card-wide">
+    <div class="code-header card-footer p-0 ">
+    <div class="lang-group nav nav-code">
+        <a href="javascript:;" class="nav-link active border-primary">Razor</a>
+    </div>
+</div>
+    <div class="card-footer text-muted ">
+        <pre><code class="hljs xml">
+ &lt;DxFormLayout&gt;&#xD;&#xA;    &lt;DxFormLayoutTabPages&gt;&#xD;&#xA;        &lt;DxFormLayoutTabPage Caption=&quot;Personal Information&quot;&gt;&#xD;&#xA;            &lt;DxFormLayoutItem Caption=&quot;First Name:&quot; ColSpanMd=&quot;6&quot; &gt;&#xD;&#xA;                &lt;Template&gt;&#xD;&#xA;                    &lt;DxTextBox @bind-Text=&quot;@FirstName&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;                &lt;/Template&gt;&#xD;&#xA;            &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;            &lt;DxFormLayoutItem Caption=&quot;Last Name:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;                &lt;Template&gt;&#xD;&#xA;                    &lt;DxTextBox @bind-Text=&quot;@LastName&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;                &lt;/Template&gt;&#xD;&#xA;            &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&#xD;&#xA;            &lt;DxFormLayoutItem Caption=&quot;Birthday:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;                &lt;Template&gt;&#xD;&#xA;                    &lt;DxDateEdit @bind-Date=&quot;@Birthday&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;                &lt;/Template&gt;&#xD;&#xA;            &lt;/DxFormLayoutItem&gt;&#xD;&#xA;        &lt;/DxFormLayoutTabPage&gt;&#xD;&#xA;&#xD;&#xA;        &lt;DxFormLayoutTabPage Caption=&quot;Work Information&quot;&gt;&#xD;&#xA;            &lt;DxFormLayoutItem Caption=&quot;Position:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;                &lt;Template&gt;&#xD;&#xA;                    &lt;DxTextBox @bind-Text=&quot;@Position&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;                &lt;/Template&gt;&#xD;&#xA;            &lt;/DxFormLayoutItem&gt;&#xD;&#xA;            &lt;DxFormLayoutItem Caption=&quot;Hire Date:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;                &lt;Template&gt;&#xD;&#xA;                    &lt;DxDateEdit @bind-Date=&quot;@HireDate&quot;&gt;&lt;/DxDateEdit&gt;&#xD;&#xA;                &lt;/Template&gt;&#xD;&#xA;            &lt;/DxFormLayoutItem&gt;&#xD;&#xA;            &lt;DxFormLayoutItem Caption=&quot;Notes:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;                &lt;Template&gt;&#xD;&#xA;                    &lt;DxTextBox @bind-Text=&quot;@Notes&quot;&gt;&lt;/DxTextBox&gt;&#xD;&#xA;                &lt;/Template&gt;&#xD;&#xA;            &lt;/DxFormLayoutItem&gt;&#xD;&#xA;        &lt;/DxFormLayoutTabPage&gt;&#xD;&#xA;    &lt;/DxFormLayoutTabPages&gt;&#xD;&#xA;&lt;/DxFormLayout&gt;&#xD;&#xA;&#xD;&#xA;@code {&#xD;&#xA;    string firstName = &quot;Nancy&quot;;&#xD;&#xA;    string FirstName { get =&gt; firstName; set { firstName = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string lastName = &quot;Davolio&quot;;&#xD;&#xA;    string LastName { get =&gt; lastName; set { lastName = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime birthday = DateTime.Now.AddYears(-20);&#xD;&#xA;    DateTime Birthday { get =&gt; birthday; set { birthday = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string position = &quot;Sales Representative&quot;;&#xD;&#xA;    string Position { get =&gt; position; set { position = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    DateTime hireDate = DateTime.Now.AddYears(-20);&#xD;&#xA;    DateTime HireDate { get =&gt; hireDate; set { hireDate = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    string notes = &quot;Education includes a BA in psychology from Colorado State University in 1970.  She also completed &#x27;The Art of the Cold Call.&#x27;  Nancy is a member of Toastmasters International.&quot;;&#xD;&#xA;    string Notes { get =&gt; notes; set { notes = value; OnChanged(); } }&#xD;&#xA;&#xD;&#xA;    void OnChanged() { InvokeAsync(StateHasChanged); }&#xD;&#xA;}
+</code></pre>
+
+    </div>
+</div>
+<div class="demo-description" id="DataBinding">
+    <h2><a href="FormLayout#DataBinding" class="demo-anchor"></a>Form Layout - Data Binding</h2>
+    <p>
+        You can use the <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxFormLayout#bind-to-data">Form Layout</a> component to display and edit data from an external source.
+        In this demo, such data source is assigned to the <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutBase.Data">Data</a> property.
+        Form Layout items must be declared and bound to data source fields using the <a class="helplink" target="_blank" href="https://docs.devexpress.com/Blazor/DevExpress.Blazor.Base.DxFormLayoutItemBase.Field">Field</a> property.
+        Each item automatically displays a DevExpress data editor suitable for the target data type. 
+    </p>
+    <p>
+        You can override the default behavior and assign a custom editor to a layout item. To see an example, review the code for the Position item below.
+    </p>
+</div>
+
+<div class="card demo-card-wide">
+    <div class="card-header">DataObject = { Name=<b>Nancy Davolio</b>, Birthday=<b>4/29/1990 2:36:21 AM</b>, Worked=<b>3</b>, Position=<b>Sales Representative</b> }</div>
+    <div class="card-body">
+        
+    
+
+            
+
+            
+
+            
+
+            
+        
+    <div id="idd399702a-3c45-4148-9bfc-e5d1da6daec3" class="dxbs-fl form-horizontal">
+        <div class="row"><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idf57ccfa5-0b6f-4fa8-86f1-abab9b8af1c8">
+                    Contact Name:
+                </label>
+                
+                    
+                        <div id="iddd7bf23f-0195-4e98-a692-599fdb0421ac" class="dxbs-textbox    dxbs-fl-ctrl">
+    <div>
+    
+        
+    
+    <div>
+        
+        <input id="idf57ccfa5-0b6f-4fa8-86f1-abab9b8af1c8" name="idf0eb9234-7437-4a56-994b-ed25f9f78068" value="Nancy Davolio" type="text" class="form-control dxbs-form-control" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+
+    
+        
+    
+</div>
+</div>
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id4bf499ec-1975-41cf-b6ee-b2935741899a">
+                    Birthday:
+                </label>
+                
+                    
+                        <div id="idfd6c77dd-cfe1-4776-98ad-30f3e4bb0afe" class="dxbs-dropdown-edit dxbs-date-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="id4bf499ec-1975-41cf-b6ee-b2935741899a" name="idb1fbd4c1-4584-4b8f-b70e-286946ce3c9b" value="04/29/1990" type="text" class="form-control dxbs-form-control dxbs-date-edit-input" autocomplete="off"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+            <div class="input-group-append">
+                    <button type="button" class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" aria-haspopup="true" aria-label="Open or close the drop-down window"></button>
+            </div>
+        
+
+    
+        
+    
+</div>
+</div>
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="idd4075228-8a35-42fe-949f-7adfedef826c">
+                    Worked year(s):
+                </label>
+                
+                    
+                        <div class="dxbs-spin-edit    dxbs-fl-ctrl">
+    <div class="input-group">
+    
+        
+    
+    <div>
+        
+        <input id="idd4075228-8a35-42fe-949f-7adfedef826c" name="id58515b98-943b-4453-a3d0-837177f8578d" value="3" type="text" class="form-control dxbs-form-control" autocomplete="off" inputmode="decimal" data-previous-value="3"></input>
+        <span class="dxbs-feedback dxbs-spin-btn-group">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+    </div>
+    
+        
+
+    
+        
+    
+</div>
+</div>
+                    
+                
+    </div>
+</div><div class="col-md-6">
+    <div class="form-group">
+                <label class="col-form-label dxbs-fl-cpt" for="id4f7d8139-5abd-45a2-9f12-796e3f0a520c">
+                    Position:
+                </label>
+                
+                    
+                        
+                    
+    
+
+    <div id="id9bbe2277-6a96-4c49-a16b-47c53ecd7123" class="dxbs-dropdown-edit dxbs-combobox    dxbs-fl-ctrl">
+        <div class="input-group dx-listbox">
+    
+        
+    
+    <div>
+        
+                
+            
+        <input id="id4f7d8139-5abd-45a2-9f12-796e3f0a520c" name="id39474ca7-eb03-4e99-85ca-58cc542e0d83" value="Sales Representative" type="text" class="form-control dxbs-form-control dx-reset-readonly-style" autocomplete="off" readonly="" data-blured-class="form-control dxbs-form-control dx-reset-readonly-style" data-focused-class="form-control dxbs-form-control dx-reset-readonly-style"></input>
+        <span class="dxbs-feedback ">
+            <span class="dxbs-edit-btn dxbs-clear-btn" role="button" aria-label="Clear value" tabindex="0">
+                <span aria-hidden="true" class>&times;</span>
+            </span>
+        </span>
+        
+            
+    </div>
+    
+                <div class="input-group-append">
+                    <span class="dxbs-edit-btn btn btn-secondary dropdown-toggle dxbs-dropdown-toggle" data-toggle="dropdown-show" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Open or close the drop-down window"></span>
+                </div>
+            
+
+    
+        
+    
+</div>
+        <div class="dx-dropdown-list-container">
+        </div>
+    </div>
+
+                
+                    
+                
+    </div>
+</div></div>
+    </div>
+
+
+    </div>
+</div>
+
+<div class="code-snippet card demo-card-wide">
+    <div class="code-header card-footer p-0 ">
+    <div class="lang-group nav nav-code">
+        <a href="javascript:;" class="nav-link active border-primary">Razor</a>
+    </div>
+</div>
+    <div class="card-footer text-muted ">
+        <pre><code class="hljs xml">
+&lt;DxFormLayout Data=&quot;@editFormData&quot;&#xD;&#xA;                ItemUpdating=&quot;@((fieldName, newValue) =&gt; OnItemUpdating(fieldName, newValue))&quot;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Field=&quot;@nameof(FormDataItem.Name)&quot; Caption=&quot;Contact Name:&quot; ColSpanMd=&quot;6&quot; /&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Field=&quot;@nameof(FormDataItem.Birthday)&quot; Caption=&quot;Birthday:&quot; ColSpanMd=&quot;6&quot; /&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Field=&quot;@nameof(FormDataItem.Worked)&quot; Caption=&quot;Worked year(s):&quot; ColSpanMd=&quot;6&quot; /&gt;&#xD;&#xA;&#xD;&#xA;    &lt;DxFormLayoutItem Field=&quot;@nameof(FormDataItem.Position)&quot; Caption=&quot;Position:&quot; ColSpanMd=&quot;6&quot;&gt;&#xD;&#xA;        &lt;Template&gt;&#xD;&#xA;            &lt;DxComboBox Data=&quot;@(new List&lt;string&gt;() { &quot;Sales Representative&quot;, &quot;Designer&quot; })&quot;&#xD;&#xA;                        SelectedItem=&quot;@(((string)((ValueEditingContext)context).Value))&quot;&#xD;&#xA;                        SelectedItemChanged=&quot;@(value =&gt; ((ValueEditingContext)context).OnChanged(value))&quot;&gt;&lt;/DxComboBox&gt;&#xD;&#xA;        &lt;/Template&gt;&#xD;&#xA;    &lt;/DxFormLayoutItem&gt;&#xD;&#xA;&lt;/DxFormLayout&gt;&#xD;&#xA;&#xD;&#xA;@code {&#xD;&#xA;    FormDataItem editFormData = new FormDataItem()&#xD;&#xA;    {&#xD;&#xA;        Name = &quot;Nancy Davolio&quot;,&#xD;&#xA;        Birthday = DateTime.Now.AddYears(-30),&#xD;&#xA;        Worked = 3,&#xD;&#xA;        Position = &quot;Sales Representative&quot;&#xD;&#xA;    };&#xD;&#xA;&#xD;&#xA;    void OnItemUpdating(string fieldName, object newValue)&#xD;&#xA;    {&#xD;&#xA;        if (fieldName == nameof(FormDataItem.Name)) {&#xD;&#xA;            editFormData.Name = newValue.ToString();&#xD;&#xA;        } else if (fieldName == nameof(FormDataItem.Birthday)) {&#xD;&#xA;            editFormData.Birthday = (DateTime)newValue;&#xD;&#xA;        } else if (fieldName == nameof(FormDataItem.Worked)) {&#xD;&#xA;            editFormData.Worked = (int)newValue;&#xD;&#xA;        } else if (fieldName == nameof(FormDataItem.Position)) {&#xD;&#xA;            editFormData.Position = newValue.ToString();&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        InvokeAsync(StateHasChanged);&#xD;&#xA;    }&#xD;&#xA;}
+</code></pre>
+
+    </div>
+</div>
+    </div>
+    <div class="footer">
+        <div class="info-wrapper">
+            <div class="version">Version: 19.2.4</div>
+            <div class="copyright">
+                <span>Copyright &copy; 2006-</span><span>2020</span>
+                Developer Express Inc
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="settingsbar" class="hidden-settings-bar">
+    <nav id="themesMenu">
+        <ul class="nav nav-pills">
+                <li class="nav-item theme-group">Color Themes</li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image default" aria-hidden="true"></span>
+                            <span class="theme-name">default</span>
+                        </a>
+                    </li>
+                <li class="nav-item theme-group">DevExpress Themes</li>
+                    <li class="nav-item">
+                        <a class="nav-link active " href="javascript:;">
+                            <span class="image blazing-berry" aria-hidden="true"></span>
+                            <span class="theme-name">blazing berry</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image purple" aria-hidden="true"></span>
+                            <span class="theme-name">purple</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image office-white" aria-hidden="true"></span>
+                            <span class="theme-name">office white</span>
+                        </a>
+                    </li>
+                <li class="nav-item theme-group">Bootswatch Themes</li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image cerulean" aria-hidden="true"></span>
+                            <span class="theme-name">cerulean</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image cosmo" aria-hidden="true"></span>
+                            <span class="theme-name">cosmo</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image cyborg" aria-hidden="true"></span>
+                            <span class="theme-name">cyborg</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image darkly" aria-hidden="true"></span>
+                            <span class="theme-name">darkly</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image flatly" aria-hidden="true"></span>
+                            <span class="theme-name">flatly</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image journal" aria-hidden="true"></span>
+                            <span class="theme-name">journal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image litera" aria-hidden="true"></span>
+                            <span class="theme-name">litera</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image lumen" aria-hidden="true"></span>
+                            <span class="theme-name">lumen</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image lux" aria-hidden="true"></span>
+                            <span class="theme-name">lux</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image materia" aria-hidden="true"></span>
+                            <span class="theme-name">materia</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image minty" aria-hidden="true"></span>
+                            <span class="theme-name">minty</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image pulse" aria-hidden="true"></span>
+                            <span class="theme-name">pulse</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image sandstone" aria-hidden="true"></span>
+                            <span class="theme-name">sandstone</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image simplex" aria-hidden="true"></span>
+                            <span class="theme-name">simplex</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image sketchy" aria-hidden="true"></span>
+                            <span class="theme-name">sketchy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image slate" aria-hidden="true"></span>
+                            <span class="theme-name">slate</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image solar" aria-hidden="true"></span>
+                            <span class="theme-name">solar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image spacelab" aria-hidden="true"></span>
+                            <span class="theme-name">spacelab</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image superhero" aria-hidden="true"></span>
+                            <span class="theme-name">superhero</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image united" aria-hidden="true"></span>
+                            <span class="theme-name">united</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="javascript:;">
+                            <span class="image yeti" aria-hidden="true"></span>
+                            <span class="theme-name">yeti</span>
+                        </a>
+                    </li>
+        </ul>
+    </nav>
+</div>
+    <!--Blazor:{"prerenderId":"06d1a80301aa4ac48d41a76c9b99955b"}-->
+    </app>
+
+    <div id="blazor-error-ui">
+        
+            An error has occurred. This application may no longer respond until reloaded.
+        
+        
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
