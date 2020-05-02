@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!--Blazor:{"sequence":0,"type":"server","prerenderId":"15cc9ccdeba14db6bdec3a80935e8bcb","descriptor":"CfDJ8L37Sc1Rk0lDsU42DjO7d2N1tXRyRUDnO/auBkPzV9QXRiizNFcHEHyHnjvdoZw2DA3aj0xZjJ4HN0c5Jl\u002B2nqHdIBhn0xwSzBBeZ0kdhZlJgQGMT2Qyt7MTVQ7o0oGT/WLlvE8POvgjX46Er\u002B9YWf/B4sLtE0aG9WxozXFy\u002BWwqk4R1Qz38VKup07CxsFLs\u002Bw2OecoYmIh4pD2/FgQCg1hvRu89yVisxC\u002Be5ZNjEoDtubEwir0O4\u002B\u002BDCfBw\u002BAIZ4MZfDelznsD36OTFjnx\u002BTuAAYDbNkcPsJ4tznisyScJdGzUqpPVGZLGGt1bgv2SoTlj\u002Bn5AynBifz7VYm1Cbm93jN9U/rs2ubZEphewK\u002BcTxyVgnoSLlIytNeYQYyaPYLuGJcGBRgsbzYkksjSz76dANCvFm33IO/lETSrFaI2Q8XmIygSdlX1F7IbYAWPCLiw=="}-->
+<meta charset="utf-8" content=""/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="DevExpress UI for Blazor ships with native user interface components (including a Data Grid, Pivot Grid, Charts and Scheduler) so you can design rich user experiences with both Blazor." name="description"/>
+<script id="highlight-js" src="highlight.min.js" type="text/javascript"></script>
+<script id="scroll-view-js" src="scroll-view.js" type="text/javascript"></script>
+<script id="demo-js" src="dx-demo.js" type="text/javascript"></script>
+<link href="site.css" id="site-css" rel="stylesheet"/>
+<link href="default.min.css" id="highlight-css" rel="stylesheet"/>
+<link href="dx-demo.css" id="demo-css" rel="stylesheet"/>
+<link href="scroll-view.css" id="scroll-view" rel="stylesheet"/>
+<link href="dx-blazor.css" id="dx-css" rel="stylesheet"/>
+<link href="17_bootstrap.min.css" id="currentTheme" rel="stylesheet"/>
+<title>Demos: Blazor UI Components | DevExpress</title>
+<meta content="Blazor, components, overview, getting started, devexpress, demo" name="keywords"/>
+<!--Blazor:{"prerenderId":"15cc9ccdeba14db6bdec3a80935e8bcb"}-->
+</head>
+<body><!-- Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
+<app>
+<!--Blazor:{"sequence":1,"type":"server","prerenderId":"f04ef3f255194274a9652ed056304ed4","descriptor":"CfDJ8L37Sc1Rk0lDsU42DjO7d2Mo0e931XTyLSijc9iP3vZ0\u002BncVCoD85kUg9jTW34olfHxg9IKmZz0LKmGEQy5CZ8LKMIOxJHUYPnXZl9Ns0LlkXOugK3kwiiBwkJrOvSn3aJzO6YjZ5xNcKZMgdmmcQot7tRv7NvFAi63z/7RdQepUTfsEnMbPY0olOFaUUxeTaKIc\u002B/rkAko6VbrllUNSOxMnVclJt35Gmze3RcTmWLfa6OD2ESPexCfEeNrDbqlRzpF2UVZvFo7o7n6yKrl4w2EuJojz5SCA8g/mSVBzeRV/2eltOZ3I98uRcHDmaJexPYNlhP0PPJZbd1N8FhAGHFoO4866YIchUa/3mLSPQ6hbPyFK6Gyq44H9Ykzk1nRSfg=="}-->
+<nav class="top-row logo-container p-0 navbar navbar-dark fixed-top flex-nowrap">
+<button class="navbar-toggler d-block bg-primary border-0">
+<span class="navbar-toggler-icon"></span>
+</button>
+<span class="logo-image"></span>
+<div class="demo-btn-container d-flex">
+<a class="download-btn navbar-toggler d-inline-block bg-primary text-white border-0" href="https://nuget.devexpress.com/" target="_blank" title="Obtain your NuGet feed URL">
+<span class="demo-download-icon"></span>
+</a>
+<div class="bg-light text-dark d-inline-block theme-settings False">
+<a class="nav-item nav-link" href="javascript:void(0);">
+<span class="demo-theme-icon"></span>
+</a>
+</div>
+</div>
+</nav>
+<div class="sidebar">
+<script async="" src="dx-blazor.js"></script><div class="blazor-scroll-view">
+<div>
+<nav class="dxbs-tree app-sidebar" id="idbd87dc55-09a8-46d2-9bb3-8f03a7e59930">
+<ul class="nav nav-pills flex-column">
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="">
+<span aria-hidden="true" class="invisible expand-btn demo-icon-expand"></span>
+<span>Overview</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Data Grid</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Pivot Grid</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Charts</span>
+<span class="badge badge-secondary">
+<span>Upd</span>
+</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Scheduler</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Data Editors</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Buttons</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>Navigation and Layout</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="javascript:;">
+<span aria-hidden="true" class="dxbs-clickable expand-btn demo-icon-expand"></span>
+<span>File Management</span>
+<span class="badge badge-secondary">
+<span>New</span>
+</span>
+</a>
+</li>
+<li class="nav-item" role="presentation">
+<a class="nav-link dxbs-clickable" href="FormValidation">
+<span aria-hidden="true" class="invisible expand-btn demo-icon-expand"></span>
+<span>Form Validation</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="footer">
+<div class="info-wrapper">
+<div class="version">Version: 19.2.4</div>
+<div class="copyright">
+<span>Copyright © 2006-</span><span>2020</span>
+                Developer Express Inc
+            </div>
+</div>
+</div>
+</div>
+<div class="main">
+<div class="content px-4">
+<div class="demo-description demo-products">
+<h1 class="mb-4">DevExpress UI Components for Blazor</h1>
+<p class="mb-5">The <a class="helplink" href="https://www.devexpress.com/blazor/" target="_blank">DevExpress UI for Blazor</a> ships with native user interface components (including a Data Grid, Pivot Grid, Charts, and Scheduler) so you can design rich user experiences in your business apps.</p>
+<div class="row mb-3">
+<div class="col-xl-4 col-sm-6 col-xs-12">
+<div class="jumbotron shadow-sm demo-product">
+<div class="media p-2">
+<span class="mr-3 bg-primary demo-product-icon demo-product-icon-grid" title="Data Grid"></span>
+<div class="media-body">
+<h5 class="mt-0 text-body">Data Grid</h5>
+<span class="demo-product-info text-muted">A fast and responsive grid component with unlimited master-detail levels and unmatched data shaping capabilities.</span>
+</div>
+</div>
+</div>
+</div><div class="col-xl-4 col-sm-6 col-xs-12">
+<div class="jumbotron shadow-sm demo-product">
+<div class="media p-2">
+<span class="mr-3 bg-primary demo-product-icon demo-product-icon-pivot" title="Pivot Grid"></span>
+<div class="media-body">
+<h5 class="mt-0 text-body">Pivot Grid</h5>
+<span class="demo-product-info text-muted">An Excel-inspired pivot table control engineered for multi-dimensional data analysis and cross-tab reporting.</span>
+</div>
+</div>
+</div>
+</div><div class="col-xl-4 col-sm-6 col-xs-12">
+<div class="jumbotron shadow-sm demo-product">
+<div class="media p-2">
+<span class="mr-3 bg-primary demo-product-icon demo-product-icon-charts" title="Charts"></span>
+<div class="media-body">
+<h5 class="mt-0 text-body">Charts</h5>
+<span class="demo-product-info text-muted">Fast and lightweight chart component with 20+ data presentation types.</span>
+</div>
+</div>
+</div>
+</div><div class="col-xl-4 col-sm-6 col-xs-12">
+<div class="jumbotron shadow-sm demo-product">
+<div class="media p-2">
+<span class="mr-3 bg-primary demo-product-icon demo-product-icon-scheduler" title="Scheduler"></span>
+<div class="media-body">
+<h5 class="mt-0 text-body">Scheduler</h5>
+<span class="demo-product-info text-muted">A fully-featured scheduling solution that easily displays a detailed snapshot of events/appointments in your web application across a single day or a week.</span>
+</div>
+</div>
+</div>
+</div><div class="col-xl-4 col-sm-6 col-xs-12">
+<div class="jumbotron shadow-sm demo-product">
+<div class="media p-2">
+<span class="mr-3 bg-primary demo-product-icon demo-product-icon-editors" title="Data Editors"></span>
+<div class="media-body">
+<h5 class="mt-0 text-body">Data Editors</h5>
+<span class="demo-product-info text-muted">An extensive suite of data editors to be used standalone or within container components.</span>
+</div>
+</div>
+</div>
+</div><div class="col-xl-4 col-sm-6 col-xs-12">
+<div class="jumbotron shadow-sm demo-product">
+<div class="media p-2">
+<span class="mr-3 bg-primary demo-product-icon demo-product-icon-navigation" title="Navigation and Layout"></span>
+<div class="media-body">
+<h5 class="mt-0 text-body">Navigation and Layout</h5>
+<span class="demo-product-info text-muted">A suite of navigation components including TreeView and Pager, in conjunction with layout components that are designed to make your UI adaptive.</span>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+<h2 class="mb-4">Getting Started</h2>
+<p>
+    Our components come with extensive reference material, documentation, examples and step-by-step instructions. This material will help you not only start using our products from scratch, but also learn about all of their capabilities much faster.
+</p>
+<ul>
+<li><a class="helplink" href="https://github.com/DevExpress/Blazor#set-up-your-environment" target="_blank">Set up your Environment</a></li>
+<li><a class="helplink" href="https://github.com/DevExpress/Blazor#how-to-run-this-demo-locally" target="_blank">Run this demo on your machine</a></li>
+<li><a class="helplink" href="https://github.com/DevExpress/Blazor#how-to-create-a-new-project" target="_blank">Create and configure a new project</a></li>
+</ul>
+<h2 class="my-4">Helpful Resources</h2>
+<p>
+    Refer to the following online resources to get started with DevExpress Blazor components:
+</p>
+<ul>
+<li><a class="helplink" href="https://docs.devexpress.com/Blazor/400725/blazor-components" target="_blank">Documentation</a></li>
+<li><a class="helplink" href="https://github.com/DevExpress/Blazor/blob/master/examples.md" target="_blank">Examples</a></li>
+<li><a class="helplink" href="https://www.devexpress.com/support/training/blazor/" target="_blank">Free Blazor training course</a></li>
+<li><a class="helplink" href="https://dotnet.microsoft.com/apps/aspnet/web-apps/client" target="_blank">Official Blazor documentation</a></li>
+</ul>
+<h2 class="my-4">Troubleshooting</h2>
+<p>
+    Need help or require more information? Explore the <a class="helplink" href="https://github.com/DevExpress/Blazor#troubleshooting" target="_blank">Troubleshooting</a> section in our GitHub repository or submit your support inquiries via the <a class="helplink" href="https://supportcenter.devexpress.com/" target="_blank">DevExpress Support Center</a> for assistance.
+</p>
+</div>
+<div class="footer">
+<div class="info-wrapper">
+<div class="version">Version: 19.2.4</div>
+<div class="copyright">
+<span>Copyright © 2006-</span><span>2020</span>
+                Developer Express Inc
+            </div>
+</div>
+</div>
+</div>
+<div class="hidden-settings-bar" id="settingsbar">
+<nav id="themesMenu">
+<ul class="nav nav-pills">
+<li class="nav-item theme-group">Color Themes</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image default"></span>
+<span class="theme-name">default</span>
+</a>
+</li>
+<li class="nav-item theme-group">DevExpress Themes</li>
+<li class="nav-item">
+<a class="nav-link active" href="javascript:;">
+<span aria-hidden="true" class="image blazing-berry"></span>
+<span class="theme-name">blazing berry</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image purple"></span>
+<span class="theme-name">purple</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image office-white"></span>
+<span class="theme-name">office white</span>
+</a>
+</li>
+<li class="nav-item theme-group">Bootswatch Themes</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image cerulean"></span>
+<span class="theme-name">cerulean</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image cosmo"></span>
+<span class="theme-name">cosmo</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image cyborg"></span>
+<span class="theme-name">cyborg</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image darkly"></span>
+<span class="theme-name">darkly</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image flatly"></span>
+<span class="theme-name">flatly</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image journal"></span>
+<span class="theme-name">journal</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image litera"></span>
+<span class="theme-name">litera</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image lumen"></span>
+<span class="theme-name">lumen</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image lux"></span>
+<span class="theme-name">lux</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image materia"></span>
+<span class="theme-name">materia</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image minty"></span>
+<span class="theme-name">minty</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image pulse"></span>
+<span class="theme-name">pulse</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image sandstone"></span>
+<span class="theme-name">sandstone</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image simplex"></span>
+<span class="theme-name">simplex</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image sketchy"></span>
+<span class="theme-name">sketchy</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image slate"></span>
+<span class="theme-name">slate</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image solar"></span>
+<span class="theme-name">solar</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image spacelab"></span>
+<span class="theme-name">spacelab</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image superhero"></span>
+<span class="theme-name">superhero</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image united"></span>
+<span class="theme-name">united</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="javascript:;">
+<span aria-hidden="true" class="image yeti"></span>
+<span class="theme-name">yeti</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<!--Blazor:{"prerenderId":"f04ef3f255194274a9652ed056304ed4"}-->
+</app>
+<div id="blazor-error-ui">
+        
+            An error has occurred. This application may no longer respond until reloaded.
+        
+        
+        <a class="reload" href="">Reload</a>
+<a class="dismiss">🗙</a>
+</div>
+<script src="blazor.server.js"></script>
+</body>
+</html>
